@@ -22,6 +22,7 @@ struct FrameworkGridView: View {
             }
             .navigationTitle("🍎 Frameworks")
         }
+        .accentColor(Color(.label))
     }
 }
 
