@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  FrameworkGridView.swift
 //  SwiftUI-SA-Frameworks
 //
 //  Created by Miran Hrupački on 13.06.2024..
@@ -7,18 +7,31 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct FrameworkGridView: View {
+    @StateObject var viewModel = FrameworkGridViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ScrollView {
+                LazyVGrid(columns: viewModel.columns) {
+                    ForEach(MockData.frameworks) { framework in
+                        FrameworkTitleView(framework: framework)
+                            .onTapGesture {
+                                viewModel.selectedFramework = framework
+                            }
+                    }
+                }
+            }
+            .navigationTitle("🍎 Frameworks")
+            .sheet(isPresented: $viewModel.isShowingDetailsView) {
+                FrameworkDetailView(framework: viewModel.selectedFramework ?? MockData.sampleFramework,
+                                    isShowingDetailView: $viewModel.isShowingDetailsView)
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    FrameworkGridView()
+        .preferredColorScheme(.dark)
 }
