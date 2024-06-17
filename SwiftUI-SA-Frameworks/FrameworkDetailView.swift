@@ -8,11 +8,46 @@
 import SwiftUI
 
 struct FrameworkDetailView: View {
+    let framework: Framework
+    @Binding var isShowingDetailView: Bool
+    @State private var isShowingSafariView: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Spacer()
+                
+                Button {
+                    isShowingDetailView = false
+                } label: {
+                    Image(systemName: "xmark")
+                        .foregroundStyle(Color(.label))
+                        .frame(width: 44, height: 44)
+                }
+            }
+            
+            Spacer()
+
+            FrameworkTitleView(framework: framework)
+
+            Text(framework.description)
+                .font(.body)
+                .padding()
+
+            Spacer()
+
+            Button {
+                isShowingSafariView = true
+            } label: {
+                AFButton(title: "Learn More")
+            }
+        }
+        .fullScreenCover(isPresented: $isShowingSafariView, content: {
+            SafariView(url: URL(string: framework.urlString) ?? URL(string: "www.apple.com")!)
+        })
     }
 }
 
 #Preview {
-    FrameworkDetailView()
+    FrameworkDetailView(framework: MockData.sampleFramework, isShowingDetailView: .constant(false))
 }
