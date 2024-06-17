@@ -20,6 +20,7 @@
 		8A6D7E822C1B25B4003EA02A /* FrameworkGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D7E812C1B25B4003EA02A /* FrameworkGridViewModel.swift */; };
 		8A6D7E842C1C0B29003EA02A /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D7E832C1C0B29003EA02A /* SafariView.swift */; };
 		8A6D7E862C202085003EA02A /* FrameworkTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D7E852C202085003EA02A /* FrameworkTitleView.swift */; };
+		8A6D7E882C202640003EA02A /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D7E872C202640003EA02A /* XDismissButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		8A6D7E812C1B25B4003EA02A /* FrameworkGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridViewModel.swift; sourceTree = "<group>"; };
 		8A6D7E832C1C0B29003EA02A /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		8A6D7E852C202085003EA02A /* FrameworkTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTitleView.swift; sourceTree = "<group>"; };
+		8A6D7E872C202640003EA02A /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				8A6D7E812C1B25B4003EA02A /* FrameworkGridViewModel.swift */,
 				8A6D7E832C1C0B29003EA02A /* SafariView.swift */,
 				8A6D7E852C202085003EA02A /* FrameworkTitleView.swift */,
+				8A6D7E872C202640003EA02A /* XDismissButton.swift */,
 			);
 			path = "SwiftUI-SA-Frameworks";
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			files = (
 				8A6D7E7E2C1B166A003EA02A /* FrameworkDetailView.swift in Sources */,
 				8A6D7E542C1AD0F6003EA02A /* FrameworkGridView.swift in Sources */,
+				8A6D7E882C202640003EA02A /* XDismissButton.swift in Sources */,
 				8A6D7E7C2C1AD13C003EA02A /* Framework.swift in Sources */,
 				8A6D7E802C1B17DB003EA02A /* AFButton.swift in Sources */,
 				8A6D7E522C1AD0F6003EA02A /* SwiftUI_SA_FrameworksApp.swift in Sources */,
