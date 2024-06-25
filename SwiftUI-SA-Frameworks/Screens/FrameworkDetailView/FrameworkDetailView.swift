@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct FrameworkDetailView: View {
-    let framework: Framework
-    @State private var isShowingSafariView: Bool = false
+    @ObservedObject var viewModel: FrameworkDetailViewModel
     
     var body: some View {
         ScrollView {
-            Text(framework.name)
+            Text(viewModel.framework.name)
                 .font(.title2)
                 .fontWeight(.semibold)
                 .scaledToFit()
                 .minimumScaleFactor(0.6)
             
             ZStack {
-                Image(framework.imageName)
+                Image(viewModel.framework.imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                 
@@ -32,28 +31,38 @@ struct FrameworkDetailView: View {
             
             .frame(maxWidth: .infinity)
             
-            Text(framework.description)
+            Text(viewModel.framework.description)
                 .font(.body)
                 .padding()
             
             Spacer()
             
-            Button {
-                isShowingSafariView = true
-            } label: {
-//                AFButton(title: "Learn More")
+            Link(destination: URL(string: viewModel.framework.urlString) ?? URL(string: "www.apple.com")!, label: {
                 Label("Learn More", systemImage: "book.fill")
-            }
-            .buttonStyle(.bordered)
-            .controlSize(.large)
-            .tint(.red)
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+                    .frame(width: 280, height: 50)
+                    .background(.red)
+                    .clipShape(.buttonBorder)
+            })
+            
+//            Button {
+//                viewModel.isShowingSafariView = true
+//            } label: {
+////                AFButton(title: "Learn More")
+//                Label("Learn More", systemImage: "book.fill")
+//            }
+//            .buttonStyle(.bordered)
+//            .controlSize(.large)
+//            .tint(.red)
         }
-        .fullScreenCover(isPresented: $isShowingSafariView, content: {
-            SafariView(url: URL(string: framework.urlString) ?? URL(string: "www.apple.com")!)
-        })
+//        .fullScreenCover(isPresented: $viewModel.isShowingSafariView, content: {
+//            SafariView(url: URL(string: viewModel.framework.urlString) ?? URL(string: "www.apple.com")!)
+//        })
     }
 }
 
 #Preview {
-    FrameworkDetailView(framework: MockData.sampleFramework)
+    FrameworkDetailView(viewModel: FrameworkDetailViewModel(framework: MockData.sampleFramework))
 }
