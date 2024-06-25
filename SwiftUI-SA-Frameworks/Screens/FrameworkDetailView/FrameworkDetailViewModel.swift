@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+final class FrameworkDetailViewModel: ObservableObject {
+    let framework: Framework
+    
+    init(framework: Framework) {
+        self.framework = framework
+    }
+}
