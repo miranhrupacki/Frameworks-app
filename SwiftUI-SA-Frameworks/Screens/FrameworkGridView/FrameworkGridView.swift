@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct FrameworkGridView: View {
-    @StateObject var viewModel = FrameworkGridViewModel()
+//    @StateObject var viewModel = FrameworkGridViewModel()
     
     var body: some View {
         NavigationStack {
             List {
                 ForEach(MockData.frameworks) { framework in
-                    NavigationLink(destination: FrameworkDetailView(framework: framework)) {
+                    NavigationLink(destination: FrameworkDetailView(viewModel: FrameworkDetailViewModel(framework: framework))) {
                         FrameworkTitleView(framework: framework)
                     }
                 }
