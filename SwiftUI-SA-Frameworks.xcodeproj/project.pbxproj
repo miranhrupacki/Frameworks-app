@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A33E18F2C2AD0770002797F /* FrameworkDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33E18E2C2AD0770002797F /* FrameworkDetailViewModel.swift */; };
 		8A6D7E522C1AD0F6003EA02A /* SwiftUI_SA_FrameworksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D7E512C1AD0F6003EA02A /* SwiftUI_SA_FrameworksApp.swift */; };
 		8A6D7E542C1AD0F6003EA02A /* FrameworkGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D7E532C1AD0F6003EA02A /* FrameworkGridView.swift */; };
 		8A6D7E562C1AD0F7003EA02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6D7E552C1AD0F7003EA02A /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A33E18E2C2AD0770002797F /* FrameworkDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewModel.swift; sourceTree = "<group>"; };
 		8A6D7E4E2C1AD0F6003EA02A /* SwiftUI-SA-Frameworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-SA-Frameworks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A6D7E512C1AD0F6003EA02A /* SwiftUI_SA_FrameworksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_SA_FrameworksApp.swift; sourceTree = "<group>"; };
 		8A6D7E532C1AD0F6003EA02A /* FrameworkGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				8A6D7E7D2C1B166A003EA02A /* FrameworkDetailView.swift */,
+				8A33E18E2C2AD0770002797F /* FrameworkDetailViewModel.swift */,
 			);
 			path = FrameworkDetailView;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A33E18F2C2AD0770002797F /* FrameworkDetailViewModel.swift in Sources */,
 				8A6D7E7E2C1B166A003EA02A /* FrameworkDetailView.swift in Sources */,
 				8A6D7E542C1AD0F6003EA02A /* FrameworkGridView.swift in Sources */,
 				8A6D7E882C202640003EA02A /* XDismissButton.swift in Sources */,
